@@ -1,0 +1,34 @@
+
+dj_fs.png
+size: 197,172
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+di
+  rotate: false
+  xy: 2, 55
+  size: 112, 115
+  orig: 112, 115
+  offset: 0, 0
+  index: -1
+tou
+  rotate: false
+  xy: 2, 2
+  size: 48, 51
+  orig: 110, 110
+  offset: 31, 27
+  index: -1
+yezi
+  rotate: true
+  xy: 116, 4
+  size: 82, 79
+  orig: 110, 110
+  offset: 11, 17
+  index: -1
+yy
+  rotate: true
+  xy: 116, 88
+  size: 82, 79
+  orig: 110, 110
+  offset: 11, 16
+  index: -1

@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "00ae46f8-4179-47e8-91e4-963f8fa8493e",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 276,
+  "height": 106,
+  "platformSettings": {},
+  "subMetas": {
+    "btn_shangpin_goumai01": {
+      "ver": "1.0.6",
+      "uuid": "b958f2a6-f780-457b-9edc-d74cc095ea1c",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "00ae46f8-4179-47e8-91e4-963f8fa8493e",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 276,
+      "height": 106,
+      "rawWidth": 276,
+      "rawHeight": 106,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

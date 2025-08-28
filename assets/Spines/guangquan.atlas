@@ -1,0 +1,48 @@
+
+guangquan.png
+size: 1756,1013
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guang
+  rotate: false
+  xy: 2, 406
+  size: 605, 605
+  orig: 617, 617
+  offset: 6, 6
+  index: -1
+guang2
+  rotate: false
+  xy: 609, 406
+  size: 605, 605
+  orig: 617, 617
+  offset: 6, 6
+  index: -1
+guangquan
+  rotate: false
+  xy: 1216, 2
+  size: 507, 499
+  orig: 750, 750
+  offset: 134, 126
+  index: -1
+guangquan2
+  rotate: false
+  xy: 1216, 503
+  size: 538, 508
+  orig: 750, 750
+  offset: 112, 122
+  index: -1
+lizi
+  rotate: false
+  xy: 2, 388
+  size: 20, 16
+  orig: 22, 50
+  offset: 1, 17
+  index: -1
+lizi2
+  rotate: false
+  xy: 1725, 488
+  size: 20, 13
+  orig: 22, 50
+  offset: 1, 18
+  index: -1

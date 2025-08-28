@@ -1,0 +1,13 @@
+
+tx_xunzhang.png
+size: 38,37
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guangquan
+  rotate: false
+  xy: 2, 2
+  size: 34, 33
+  orig: 36, 33
+  offset: 0, 0
+  index: -1

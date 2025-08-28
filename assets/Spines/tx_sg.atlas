@@ -1,0 +1,13 @@
+
+tx_sg.png
+size: 186,220
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+saoguang
+  rotate: false
+  xy: 2, 2
+  size: 182, 216
+  orig: 182, 216
+  offset: 0, 0
+  index: -1

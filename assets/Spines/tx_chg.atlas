@@ -1,0 +1,27 @@
+
+tx_chg.png
+size: 441,329
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ch
+  rotate: false
+  xy: 331, 219
+  size: 108, 108
+  orig: 110, 110
+  offset: 1, 1
+  index: -1
+huangguang
+  rotate: false
+  xy: 331, 155
+  size: 62, 62
+  orig: 76, 76
+  offset: 7, 7
+  index: -1
+xingbig
+  rotate: false
+  xy: 2, 2
+  size: 327, 325
+  orig: 333, 333
+  offset: 3, 4
+  index: -1

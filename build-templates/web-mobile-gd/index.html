@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Stone Line</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+    content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit" />
+  <meta name="force-rendering" content="webkit" />
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="360-fullscreen" content="true" />
+
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.css" />
+  <link rel="icon" href="favicon.ico" />
+
+</head>
+
+<body>
+  <script src="js/jquery-2.0.0.min.js"></script>
+
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <div id="splash">
+    <div class="progress-bar stripes">
+      <span style="width: 0%"></span>
+    </div>
+  </div>
+
+  <script src="src/settings.js" charset="utf-8"></script>
+
+  <script src="main.js" charset="utf-8"></script>
+  <script src="ccc2-all-patches.js" charset="utf-8"></script>
+
+  <div id="top-banner" style="visibility: hidden; z-index: 99999;width:100%; background: #FFFFFF00;"></div>
+
+  <script type="text/javascript">
+    console.log("1.0.1", 4)
+    window["isReady"] = false;
+    window["isShowAd"] = false;
+    window["GDSDK"] = {};
+    window["GD_OPTIONS"] = {
+      debug: false, // Enable debugging console. This will set a value in local storage as well, remove this value if you don't want debugging at all. You can also call it by running gdsdk.openConsole() within your browser console.
+      gameId: "c9f842ab8eab48a884f3733beeffd140", // Your gameId which is unique for each one of your games; can be found at your Gamedistribution.com account.
+      advertisementSettings: {
+        autoplay: true,
+      },
+      onEvent: function (event) {
+        switch (event.name) {
+          case "SDK_GAME_START":
+            window["isShowAd"] = false;
+            console.log("SDK_GAME_START", new Date())
+            if(window["gameShow"] == true){
+              cc.audioEngine.resumeAll();
+            }
+            
+            break;
+          case "SDK_GAME_PAUSE":
+            console.log("SDK_GAME_PAUSE", new Date());
+            window["isShowAd"] = true;
+            cc.audioEngine.pauseAll();
+            
+            break;
+          case "SDK_READY":
+            window["isReady"] = true;
+            console.log("SDK_READT", new Date())
+            break;
+          case "SDK_ERROR":
+            console.log("SDK_ERROR", new Date())
+            // ...
+            break;
+          case "SDK_GDPR_TRACKING":
+            console.log("SDK_GDPR_TRACKING", new Date())
+            // ..
+            break;
+          case "SDK_GDPR_TARGETING":
+            console.log("SDK_GDPR_TARGETING", new Date())
+            // ..
+            break;
+          case "SDK_GDPR_THIRD_PARTY":
+            console.log("SDK_GDPR_THIRD_PARTY", new Date())
+            // ..
+            break;
+        }
+      },
+    };
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://html5.api.gamedistribution.com/main.min.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "gamedistribution-jssdk");
+
+    function adaptable_banner() {
+      document.getElementById('top-banner').style.top = (document.documentElement.clientHeight - 90) + "px";
+      window.gdsdk.showAd(window.gdsdk.AdType.Display, { containerId: "top-banner" })
+        .then(() => console.info('showAd(window.gdsdk.AdType.Display) resolved.'))
+        .catch(error => console.info(error));
+    }
+
+    function hideBanner() {
+      console.warn("调用 hidebanner事件")
+      $("#top-banner").hide();
+      // clearInterval(_bannerTimer);
+    }
+
+    function showBanner() {
+      console.warn("调用 showBanner")
+      $("#top-banner").show();
+      // clearInterval(_bannerTimer);
+      // _bannerTimer = setInterval(() => {
+      //   adaptable_banner();
+      // }, _bannerRefreshTime);
+      adaptable_banner();
+    }
+
+    (function () {
+      // open web debugger console
+      if (typeof VConsole !== 'undefined') {
+        window.vConsole = new VConsole();
+      }
+
+      var debug = window._CCSettings.debug;
+      var splash = document.getElementById('splash');
+      splash.style.display = 'block';
+
+      function loadScript(moduleName, cb) {
+        function scriptLoaded() {
+          document.body.removeChild(domScript);
+          domScript.removeEventListener('load', scriptLoaded, false);
+          cb && cb();
+        };
+        var domScript = document.createElement('script');
+        domScript.async = true;
+        domScript.src = moduleName;
+        domScript.addEventListener('load', scriptLoaded, false);
+        document.body.appendChild(domScript);
+      }
+
+      loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.2773f.js', function () {
+        if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
+          loadScript(debug ? 'physics.js' : 'physics-min.941a2.js', window.boot);
+        }
+        else {
+          window.boot();
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>

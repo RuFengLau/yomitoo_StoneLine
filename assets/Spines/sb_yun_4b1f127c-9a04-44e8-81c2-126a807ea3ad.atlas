@@ -1,0 +1,27 @@
+
+sb_yun.png
+size: 582,704
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dianguang
+  rotate: false
+  xy: 2, 335
+  size: 578, 367
+  orig: 617, 397
+  offset: 24, 13
+  index: -1
+yu
+  rotate: false
+  xy: 531, 277
+  size: 5, 56
+  orig: 5, 62
+  offset: 0, 0
+  index: -1
+yun
+  rotate: false
+  xy: 2, 2
+  size: 527, 331
+  orig: 535, 336
+  offset: 4, 4
+  index: -1

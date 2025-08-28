@@ -1,0 +1,62 @@
+
+rules.png
+size: 436,209
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+16
+  rotate: false
+  xy: 334, 107
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 130, 107
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+32
+  rotate: false
+  xy: 130, 5
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 232, 107
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+64
+  rotate: false
+  xy: 232, 5
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+8
+  rotate: false
+  xy: 334, 5
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+g
+  rotate: false
+  xy: 2, 81
+  size: 126, 126
+  orig: 128, 128
+  offset: 1, 1
+  index: -1
+sz
+  rotate: true
+  xy: 2, 2
+  size: 77, 105
+  orig: 77, 105
+  offset: 0, 0
+  index: -1

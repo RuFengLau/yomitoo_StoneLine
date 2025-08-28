@@ -1,0 +1,13 @@
+
+tx_wind.png
+size: 399,470
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+wind
+  rotate: false
+  xy: 2, 2
+  size: 395, 466
+  orig: 400, 474
+  offset: 2, 6
+  index: -1

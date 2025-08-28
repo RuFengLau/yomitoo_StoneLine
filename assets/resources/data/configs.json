@@ -1,0 +1,13 @@
+{
+	"Tool": "github.com/davyxu/tabtoy",
+	"Version": "2.8.11",
+	"MutiLanguageConfigs":[
+		{ "_id": "1", "key": "获取奖励成功", "en_us": "Successfully received the reward", "id": "Berhasil menerima hadiah", "pt_br": "Recompensa recebida com sucesso", "es": "Recompensa Obtenida", "vi": "Nhận phần thưởng thành công" },
+		{ "_id": "2", "key": "未观看完广告无法获取奖励", "en_us": "Haven't finished watching the ads, can't get the reward", "id": "Belum selesai menonton iklan, tidak bisa mendapatkan hadiah", "pt_br": "Não terminou de assistir aos anúncios, não pode receber a recompensa", "es": "Mira el anuncio completo", "vi": "Chưa xem hết quảng cáo, không thể nhận phần thưởng." },
+		{ "_id": "3", "key": "抽奖...", "en_us": "Lottery...", "id": "Undian...", "pt_br": "Sorteio...", "es": "Sorteo...", "vi": "Xổ số..." },
+		{ "_id": "4", "key": "视频播放失败", "en_us": "Video failed", "id": "Video gagal", "pt_br": "Erro de vídeo", "es": "Error de video", "vi": "Phát video thất bại" },
+		{ "_id": "5", "key": "金币不足", "en_us": "Not enough gold", "id": "Emas tidak cukup", "pt_br": "Ouro insuficiente", "es": "Oro insuficiente", "vi": "Không đủ vàng" },
+		{ "_id": "6", "key": "明天见！", "en_us": "See you tomorrow!", "id": "Sampai besok!", "pt_br": "Até amanhã!", "es": "¡Hasta mañana!", "vi": "Hẹn gặp ngày mai!" },
+		{ "_id": "7", "key": "签到", "en_us": "Sign-in" },
+		{ "_id": "8", "key": "第{0}天", "en_us": "Day {0}" }
+	]}

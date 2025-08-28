@@ -1,0 +1,209 @@
+
+tx_zhadan.png
+size: 1795,410
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00003
+  rotate: false
+  xy: 1719, 104
+  size: 37, 33
+  orig: 100, 100
+  offset: 28, 30
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00005
+  rotate: true
+  xy: 1498, 246
+  size: 53, 50
+  orig: 100, 100
+  offset: 21, 22
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00007
+  rotate: true
+  xy: 1735, 278
+  size: 61, 58
+  orig: 100, 100
+  offset: 18, 19
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00009
+  rotate: false
+  xy: 1719, 139
+  size: 64, 62
+  orig: 100, 100
+  offset: 17, 17
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00011
+  rotate: false
+  xy: 1719, 203
+  size: 66, 64
+  orig: 100, 100
+  offset: 16, 16
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00013
+  rotate: true
+  xy: 1708, 341
+  size: 67, 65
+  orig: 100, 100
+  offset: 15, 15
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00015
+  rotate: true
+  xy: 1600, 255
+  size: 68, 66
+  orig: 100, 100
+  offset: 15, 15
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00017
+  rotate: true
+  xy: 1640, 340
+  size: 68, 66
+  orig: 100, 100
+  offset: 15, 15
+  index: -1
+Smoke 004 Impact Explosion Radial/Smoke 004 Impact Explosion Radial_00019
+  rotate: true
+  xy: 1668, 269
+  size: 69, 65
+  orig: 100, 100
+  offset: 14, 15
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00001
+  rotate: false
+  xy: 1550, 251
+  size: 48, 48
+  orig: 300, 300
+  offset: 124, 132
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00003
+  rotate: true
+  xy: 1471, 301
+  size: 107, 85
+  orig: 300, 300
+  offset: 96, 112
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00005
+  rotate: false
+  xy: 2, 17
+  size: 162, 129
+  orig: 300, 300
+  offset: 75, 96
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00007
+  rotate: false
+  xy: 485, 24
+  size: 202, 161
+  orig: 300, 300
+  offset: 62, 86
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00009
+  rotate: false
+  xy: 858, 7
+  size: 223, 190
+  orig: 300, 300
+  offset: 53, 70
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00011
+  rotate: false
+  xy: 725, 199
+  size: 239, 209
+  orig: 300, 300
+  offset: 45, 58
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00013
+  rotate: false
+  xy: 470, 187
+  size: 253, 221
+  orig: 300, 300
+  offset: 39, 51
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00015
+  rotate: true
+  xy: 2, 148
+  size: 260, 230
+  orig: 300, 300
+  offset: 37, 46
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00017
+  rotate: true
+  xy: 234, 164
+  size: 244, 234
+  orig: 300, 300
+  offset: 56, 44
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00019
+  rotate: false
+  xy: 966, 212
+  size: 231, 196
+  orig: 300, 300
+  offset: 69, 46
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00021
+  rotate: false
+  xy: 283, 2
+  size: 200, 160
+  orig: 300, 300
+  offset: 100, 75
+  index: -1
+Sparks 002 Impact Explosion Radial/Sparks 002 Impact Explosion Radial_00023
+  rotate: false
+  xy: 1361, 251
+  size: 135, 47
+  orig: 300, 300
+  offset: 164, 146
+  index: -1
+boom3/0
+  rotate: false
+  xy: 1558, 325
+  size: 80, 83
+  orig: 83, 85
+  offset: 1, 1
+  index: -1
+boom3/1
+  rotate: false
+  xy: 166, 21
+  size: 115, 125
+  orig: 119, 131
+  offset: 3, 1
+  index: -1
+boom3/2
+  rotate: true
+  xy: 689, 10
+  size: 175, 167
+  orig: 177, 176
+  offset: 1, 1
+  index: -1
+boom3/3
+  rotate: true
+  xy: 1083, 11
+  size: 199, 188
+  orig: 201, 199
+  offset: 1, 1
+  index: -1
+boom3/4
+  rotate: true
+  xy: 1499, 20
+  size: 224, 218
+  orig: 227, 225
+  offset: 2, 5
+  index: -1
+boom3/5
+  rotate: true
+  xy: 1273, 11
+  size: 233, 224
+  orig: 236, 232
+  offset: 1, 7
+  index: -1
+boooo
+  rotate: false
+  xy: 1199, 246
+  size: 160, 162
+  orig: 170, 165
+  offset: 5, 0
+  index: -1
+ch
+  rotate: false
+  xy: 1361, 300
+  size: 108, 108
+  orig: 110, 110
+  offset: 1, 1
+  index: -1

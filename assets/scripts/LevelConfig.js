@@ -1,0 +1,37 @@
+var t = require;
+var e = module;
+var n = exports;
+Object.defineProperty(n, "__esModule", {value: !0}),
+    (n.default = {
+        1: {targetScore: 1e3, helpTime: 1, helpBallsNum: 20, balls: [16, 16, 16, 0, 0, 0, 0]},
+        2: {targetScore: 2600, helpTime: 1, helpBallsNum: 20, balls: [16, 12, 12, 8, 0, 0, 0]},
+        3: {targetScore: 4e3, helpTime: 1, helpBallsNum: 20, balls: [0, 14, 12, 12, 10, 0, 0]},
+        4: {targetScore: 5400, helpTime: 1, helpBallsNum: 20, balls: [0, 12, 12, 12, 12, 0, 0]},
+        5: {targetScore: 6800, helpTime: 1, helpBallsNum: 20, balls: [12, 0, 12, 12, 12, 0, 0]},
+        6: {targetScore: 8200, helpTime: 1, helpBallsNum: 20, balls: [0, 15, 15, 10, 10, 0, 0]},
+        7: {targetScore: 9700, helpTime: 1, helpBallsNum: 20, balls: [10, 10, 10, 20, 0, 0, 0]},
+        8: {targetScore: 11200, helpTime: 1, helpBallsNum: 20, balls: [7, 7, 16, 10, 10, 0, 0]},
+        9: {targetScore: 12700, helpTime: 1, helpBallsNum: 20, balls: [0, 15, 10, 15, 10, 0, 0]},
+        10: {targetScore: 14300, helpTime: 1, helpBallsNum: 20, balls: [0, 20, 10, 10, 10, 0, 0]},
+        11: {targetScore: 15900, helpTime: 1, helpBallsNum: 20, balls: [13, 5, 13, 14, 5, 0, 0]},
+        12: {targetScore: 17500, helpTime: 1, helpBallsNum: 20, balls: [14, 14, 14, 14, 12, 0, 0]},
+        13: {targetScore: 19300, helpTime: 1, helpBallsNum: 20, balls: [15, 13, 15, 15, 15, 0, 0]},
+        14: {targetScore: 21100, helpTime: 1, helpBallsNum: 20, balls: [15, 19, 12, 17, 17, 0, 0]},
+        15: {targetScore: 22900, helpTime: 1, helpBallsNum: 20, balls: [15, 15, 19, 19, 19, 0, 0]},
+        16: {targetScore: 24800, helpTime: 1, helpBallsNum: 30, balls: [14, 14, 14, 14, 12, 0, 0]},
+        17: {targetScore: 26700, helpTime: 1, helpBallsNum: 30, balls: [15, 13, 15, 15, 15, 0, 0]},
+        18: {targetScore: 28600, helpTime: 1, helpBallsNum: 30, balls: [15, 19, 12, 17, 17, 0, 0]},
+        19: {targetScore: 30500, helpTime: 1, helpBallsNum: 30, balls: [15, 15, 19, 19, 19, 0, 0]},
+        20: {targetScore: 32700, helpTime: 1, helpBallsNum: 30, balls: [23, 23, 20, 20, 14, 0, 0]},
+        21: {targetScore: 34900, helpTime: 1, helpBallsNum: 30, balls: [15, 19, 24, 21, 21, 0, 0]},
+        22: {targetScore: 37100, helpTime: 1, helpBallsNum: 30, balls: [21, 21, 21, 21, 21, 0, 0]},
+        23: {targetScore: 40100, helpTime: 1, helpBallsNum: 30, balls: [23, 23, 23, 23, 23, 0, 0]},
+        24: {targetScore: 43100, helpTime: 1, helpBallsNum: 30, balls: [25, 25, 25, 25, 25, 0, 0]},
+        25: {targetScore: 46100, helpTime: 1, helpBallsNum: 30, balls: [27, 27, 27, 27, 27, 0, 0]},
+        26: {targetScore: 50100, helpTime: 1, helpBallsNum: 30, balls: [29, 29, 29, 29, 29, 0, 0]},
+        27: {targetScore: 54100, helpTime: 1, helpBallsNum: 30, balls: [31, 31, 31, 31, 31, 0, 0]},
+        28: {targetScore: 58100, helpTime: 1, helpBallsNum: 30, balls: [33, 33, 33, 33, 33, 0, 0]},
+        29: {targetScore: 62100, helpTime: 1, helpBallsNum: 30, balls: [32, 32, 32, 32, 32, 0, 0]},
+        30: {targetScore: 66100, helpTime: 1, helpBallsNum: 30, balls: [32, 32, 32, 32, 32, 0, 0]},
+        31: {targetScore: 7e4, helpTime: 1, helpBallsNum: 30, balls: [32, 32, 32, 32, 32, 0, 0]}
+    });
