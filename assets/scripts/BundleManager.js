@@ -84,30 +84,34 @@ var s = (function (t) {
             });
         }),
         (e.prototype.preloadDir = function (t, e, n, i) {
-            var o = this;
-            return (
-                void 0 === i && (i = null),
-                new Promise(function (s, c) {
-                    return __awaiter(o, void 0, void 0, function () {
-                        return __generator(this, function (o) {
-                            switch (o.label) {
-                                case 0:
-                                    return [4, this.loadBundle(t)];
-                                case 1:
-                                    return (
-                                        o.sent().loadDir(e, n, function (n, o) {
-                                            n && (cc.log(n), c()),
-                                                console.log("preloadDir bundle: " + t + " path: " + e),
-                                                i && i(o),
-                                                s(o);
-                                        }),
-                                        [2]
-                                    );
-                            }
-                        });
+            return new Promise(async (resolve, reject) => {
+                try {
+                    // 加载 bundle
+                    const bundle = await this.loadBundle(t);
+        
+                    // 加载目录
+                    bundle.loadDir(e, n, (err, assets) => {
+                        if (err) {
+                            cc.log(err);
+                            reject(err);
+                            return;
+                        }
+        
+                        console.log(`preloadDir bundle: ${t} path: ${e}`);
+        
+                        // 如果有回调，执行回调
+                        if (i) {
+                            i(assets);
+                        }
+        
+                        // 完成 Promise
+                        resolve(assets);
                     });
-                })
-            );
+                } catch (err) {
+                    cc.error("preloadDir 出错:", err);
+                    reject(err);
+                }
+            });
         }),
         e
     );

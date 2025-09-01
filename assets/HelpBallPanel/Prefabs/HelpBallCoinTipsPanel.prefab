@@ -34,10 +34,13 @@
       },
       {
         "__id__": 53
+      },
+      {
+        "__id__": 54
       }
     ],
     "_prefab": {
-      "__id__": 54
+      "__id__": 55
     },
     "_opacity": 255,
     "_color": {
@@ -624,7 +627,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 74.88,
+      "width": 260,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -676,23 +679,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Hint",
-    "_N$string": "Hint",
+    "_string": "提示",
+    "_N$string": "提示",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1744,7 +1745,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 360,
-      "height": 130.39999999999998
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1756,7 +1757,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        30.567,
+        32.82,
         0,
         0,
         0,
@@ -1795,23 +1796,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Insufficient gold , whether to add 20 gems for free",
-    "_N$string": "Insufficient gold , whether to add 20 gems for free",
+    "_string": "金币不足，是否免费增加20颗宝石",
+    "_N$string": "金币不足，是否免费增加20颗宝石",
     "_fontSize": 40,
-    "_lineHeight": 40,
+    "_lineHeight": 46,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 3,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1905,6 +1904,16 @@
     "showInsertCount_google": 1,
     "type": "browse",
     "key": "normal",
+    "_id": ""
+  },
+  {
+    "__type__": "add99Rw0FFJA520CZgvUu2+",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
     "_id": ""
   },
   {

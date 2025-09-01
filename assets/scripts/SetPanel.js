@@ -41,7 +41,7 @@ var r = t("AdMgr"),
                 r.default.hideBanner(), s.default.inst.vibrationSwitch.unBindObserveFunc(this.updateVibrationIcon);
             }),
             (e.prototype.updateDisplay = function (t) {
-                0 === t.type ? (this.tLabel.string = "Settings") : (this.tLabel.string = "Pause"),
+                0 === t.type ? (this.tLabel.string = String("设置").toLocalize()) : (this.tLabel.string = String("暂停").toLocalize()),
                     this.updateVibrationIcon();
             }),
             (e.prototype.updateVibrationIcon = function () {

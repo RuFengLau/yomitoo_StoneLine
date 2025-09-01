@@ -2,7 +2,7 @@ var t = require;
 var e = module;
 var n = exports;
 var i;
-Object.defineProperty(n, "__esModule", {value: !0});
+Object.defineProperty(n, "__esModule", { value: !0 });
 var r = t("BundleManager"),
     s = t("DataManager"),
     c = t("PopupManager"),
@@ -66,20 +66,20 @@ var r = t("BundleManager"),
                 }
                 r.default.inst.loadRes("Common", e, cc.SpriteFrame, function (e) {
                     (t.levelBg.spriteFrame = e), (t.CoinBg.spriteFrame = e);
-                }),
-                    r.default.inst.loadRes("Common", n, cc.SpriteFrame, function (e) {
-                        (t.propBombBg.spriteFrame = e), (t.propCleanBg.spriteFrame = e), (t.fanButton.spriteFrame = e);
-                    });
+                });
+                r.default.inst.loadRes("Common", n, cc.SpriteFrame, function (e) {
+                    (t.propBombBg.spriteFrame = e), (t.propCleanBg.spriteFrame = e), (t.fanButton.spriteFrame = e);
+                });
             }),
             (e.prototype.fluhsLevel = function () {
                 var t = s.default.inst.levelNum.val;
-                (this.levelLabel.string = "Level " + t),
+                (this.levelLabel.string = "关卡" + " " + t),
                     (this.curLevelLabel.string = "" + s.default.inst.levelNum.val),
                     (this.nextLevelLabel.string = s.default.inst.levelNum.val + 1);
             }),
             (e.prototype.setBtnClick = function () {
                 l.default.inst.tj("click_setting"),
-                    c.default.show(u.default.path, c.PopupCacheMode.Frequent, {type: 1});
+                    c.default.show(u.default.path, c.PopupCacheMode.Frequent, { type: 1 });
             }),
             (e.prototype.scratchCardBtnClick = function () {
                 l.default.inst.tj("click_game_scratchcard"), c.default.show(p.default.path, c.PopupCacheMode.Frequent);

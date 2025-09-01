@@ -1,8 +1,10 @@
+const { PlatformAdManager } = require("../ymtScripts/yomitoo/tools/PlatformAdManager");
+
 var t = require;
 var e = module;
 var n = exports;
 var i;
-Object.defineProperty(n, "__esModule", {value: !0});
+Object.defineProperty(n, "__esModule", { value: !0 });
 var r = t("PropConfig"),
     s = t("DataManager"),
     c = t("PopupManager"),
@@ -40,8 +42,8 @@ var r = t("PropConfig"),
             (e.prototype.updateNum = function () {
                 s.default.inst.propBombNum.val > 0
                     ? ((this.numLabel.string = s.default.inst.propBombNum.val),
-                      (this.numBg.active = !0),
-                      (this.propBombCoinBg.active = !1))
+                        (this.numBg.active = !0),
+                        (this.propBombCoinBg.active = !1))
                     : ((this.propBombCoinBg.active = !0), (this.numBg.active = !1));
             }),
             (e.prototype.updateSelect = function () {
@@ -50,15 +52,33 @@ var r = t("PropConfig"),
                     : this.PropIconSpine.setAnimation(0, "animation", !1);
             }),
             (e.prototype.onPropBombChick = function () {
-                console.log("点击炸弹道具"),
-                    (s.default.inst.bSelectPropClean.val = !1),
-                    s.default.inst.bSelectPropBomb.val
-                        ? (s.default.inst.bSelectPropBomb.val = !1)
-                        : s.default.inst.propBombNum.val > 0
-                        ? (s.default.inst.bSelectPropBomb.val = !0)
-                        : s.default.inst.coinNum.val >= r.default.propBombCoin
-                        ? (s.default.inst.bSelectPropBomb.val = !0)
-                        : c.default.show(l.default.path, c.PopupCacheMode.Normal, {tipStr: String("金币不足").toLocalize()});
+                // 先关闭清除道具选择
+                s.default.inst.bSelectPropBomb.val = false;
+
+                // 如果已经选中炸弹 → 取消选择
+                if (s.default.inst.bSelectPropBomb.val) {
+                    s.default.inst.bSelectPropBomb.val = false;
+                    return;
+                }
+
+                // 如果有炸弹道具 → 选中
+                if (s.default.inst.propBombNum.val > 0) {
+                    s.default.inst.bSelectPropBomb.val = true;
+                    return;
+                }
+
+                // 如果金币够买炸弹 → 选中
+                if (s.default.inst.coinNum.val >= r.default.propBombCoin) {
+                    s.default.inst.bSelectPropBomb.val = true;
+                    return;
+                }
+                
+                // 都不满足 → 提示金币不足
+                c.default.show(
+                    l.default.path,
+                    c.PopupCacheMode.Normal,
+                    { tipStr: String("金币不足").toLocalize() }
+                );
             }),
             __decorate([d(sp.Skeleton)], e.prototype, "PropIconSpine", void 0),
             __decorate([d(cc.Node)], e.prototype, "propBombCoinBg", void 0),

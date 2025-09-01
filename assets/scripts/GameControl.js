@@ -195,8 +195,7 @@ var c = t("PropConfig"),
             }),
             (e.prototype.preloadRes = function () {}),
             (e.prototype.bombSpeedEditBoxEnd = function () {
-                console.log("bombSpeedEditBox : " + this.bombSpeedEditBox.string),
-                    (this.ballBombSpeed = Number(this.bombSpeedEditBox.string));
+                this.ballBombSpeed = Number(this.bombSpeedEditBox.string)
             }),
             (e.prototype.scoreNumFlush = function () {
                 null != this.levelData &&
@@ -209,7 +208,7 @@ var c = t("PropConfig"),
                         this.showLevelUpTips());
             }),
             (e.prototype.updateSurplusBalls = function () {
-                this.surplusBalls.string = "Remaining Gems：" + this.surplusBallsNum;
+                this.surplusBalls.string = String("剩余宝石").toLocalize() + " " + this.surplusBallsNum;
             }),
             (e.prototype.levelTurnNumFlush = function () {
                 f.default.inst.playEffect("fireworks"),
@@ -613,11 +612,11 @@ var c = t("PropConfig"),
                                 console.log("不能消除了"),
                                     (this.bCheckGameEnd = !1),
                                     (this.surplusBallLabel.node.active = !0),
-                                    (this.surplusBallLabel.string = "Remaining gems：" + this.gameBalls.length),
+                                    (this.surplusBallLabel.string = String("剩余宝石").toLocalize() + " " + this.gameBalls.length),
                                     this.gameBalls.length,
                                     (this.bonusLabel.node.active = !0),
                                     (t = d.default.inst.getBonusScore(this.gameBalls.length)),
-                                    (this.bonusLabel.string = "Award Score：" + t),
+                                    (this.bonusLabel.string = "奖励分数" + " " + t),
                                     (d.default.inst.scoreNum.val += t),
                                     (e = function (t) {
                                         var e, i;

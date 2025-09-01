@@ -32,6 +32,7 @@ import GamePixAd from "../ad/GamePixAd";
 import GooglePlayAd from "../ad/GooglePlayAd";
 import VidMateH5Ad from "../ad/VidMateH5Ad";
 import JoliboxAd from "../ad/JoliboxAd";
+import MiniGameAd from "../ad/MiniGameAd";
 
 
 export default class BaseGameSys {
@@ -263,7 +264,39 @@ export default class BaseGameSys {
 
         let afterLogin = () => {
             let sysInfo = null;
-            if(YmtConstant.IS_VidMate_GAME || YmtConstant.IS_Jolibox_Game){
+            if (YmtConstant.IS_Mini_Game) {
+                /**微游 */
+                LocalizeMgr.inst.languageType = LanguageType.cn;
+                // @ts-ignore
+                var local = minigame.getLocale();
+                console.error("语种:", local);
+                switch (local) {
+                    case "zh-CN":
+                        LocalizeMgr.inst.languageType = LanguageType.cn;
+                        break;
+                    case "en":
+                        LocalizeMgr.inst.languageType = LanguageType.en_us;
+                        break;
+                    case "pt":
+                        LocalizeMgr.inst.languageType = LanguageType.pt_br;
+                        break;
+                    case "id":
+                        LocalizeMgr.inst.languageType = LanguageType.id;
+                    case "es":
+                        LocalizeMgr.inst.languageType = LanguageType.es;
+                        break;
+                    case "vi":
+                        LocalizeMgr.inst.languageType = LanguageType.vi;
+                        break;
+                }
+                // 支持 简体中文zh_CN, 英语en, 印尼id, 葡萄牙pt, 西班牙es，越南vi, 
+    
+                // 支持西班牙: es 支持葡萄牙: pt 支持越南: vi 支持英语:en
+    
+                // 阿拉伯: ar 繁中:zh_TW 印尼: id 印地：hi
+    
+            } else if(YmtConstant.IS_VidMate_GAME || 
+                YmtConstant.IS_Jolibox_Game){
                 LocalizeMgr.inst.languageType = LanguageType.en_us;
             } else if(YmtConstant.IS_GamePix_GAME){
                 LocalizeMgr.inst.languageType = LanguageType.en_us;
@@ -411,7 +444,8 @@ export default class BaseGameSys {
             YmtConstant.IS_Y8_GAME ||
             YmtConstant.IS_GOOGLEPLAY || 
             YmtConstant.IS_VidMate_GAME ||
-            YmtConstant.IS_Jolibox_Game
+            YmtConstant.IS_Jolibox_Game ||
+            YmtConstant.IS_Mini_Game
         ) {
             afterLogin();
         } else if (YmtConstant.IS_OPPO_GAME || YmtConstant.IS_VIVO_GAME) {
@@ -730,7 +764,9 @@ export default class BaseGameSys {
      * 获取广告实例
      */
     static Ad(): YmtAdManager {
-        if (YmtConstant.IS_Jolibox_Game) {
+        if (YmtConstant.IS_Mini_Game) {
+            return MiniGameAd.getInstance();
+        } else if (YmtConstant.IS_Jolibox_Game) {
             return JoliboxAd.getInstance();
         } else if (YmtConstant.IS_VidMate_GAME) {
             return VidMateH5Ad.getInstance();
@@ -971,6 +1007,12 @@ export default class BaseGameSys {
         }else if(YmtConstant.IS_Jolibox_Game){
             // @ts-ignore
             window.joliboxSdk.runtime.loadFinished();
+        }else if (YmtConstant.IS_Mini_Game) {
+            // @ts-ignore
+            h5splash.hideLoading();
+        }else if (YmtConstant.IS_Y8_GAME) {
+            // @ts-ignore
+            h5splash.hideLoading();
         }
         this.isLoadGameComplete = true;
     }

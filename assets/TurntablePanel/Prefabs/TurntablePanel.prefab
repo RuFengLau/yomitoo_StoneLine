@@ -34,10 +34,13 @@
       },
       {
         "__id__": 79
+      },
+      {
+        "__id__": 80
       }
     ],
     "_prefab": {
-      "__id__": 80
+      "__id__": 81
     },
     "_opacity": 255,
     "_color": {
@@ -2839,6 +2842,16 @@
     "showInsertCount_google": 1,
     "type": "browse",
     "key": "normal",
+    "_id": ""
+  },
+  {
+    "__type__": "add99Rw0FFJA520CZgvUu2+",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
     "_id": ""
   },
   {

@@ -73,6 +73,10 @@ export default class BaseConstant {
 
 	static readonly IS_Jolibox_Game = typeof window['joliboxSdk'] != "undefined";
 
+	/**微游 minigame */
+	static readonly IS_Mini_Game = typeof window['MiniGameSDK'] != "undefined";
+
+	
 	static get IS_WEB_GAME() {
 		if (this.IS_IOS || this.IS_ANDROID) return false;
 		let ret = true;

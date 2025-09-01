@@ -31,10 +31,16 @@
       },
       {
         "__id__": 52
+      },
+      {
+        "__id__": 53
+      },
+      {
+        "__id__": 54
       }
     ],
     "_prefab": {
-      "__id__": 53
+      "__id__": 55
     },
     "_opacity": 255,
     "_color": {
@@ -618,7 +624,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 60.02,
+      "width": 250,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -670,23 +676,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Tip",
-    "_N$string": "Tip",
+    "_string": "提示",
+    "_N$string": "提示",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -771,8 +775,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 300,
-      "height": 130.39999999999998
+      "width": 355,
+      "height": 220
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -823,23 +827,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Do you want to continue the game?",
-    "_N$string": "Do you want to continue the game?",
+    "_string": "你要继续游戏吗？",
+    "_N$string": "你要继续游戏吗？",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 3,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1094,7 +1096,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 69.73,
+      "width": 200,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1107,7 +1109,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        6.732,
+        4,
         0,
         0,
         0,
@@ -1146,23 +1148,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Yes",
-    "_N$string": "Yes",
+    "_string": "是",
+    "_N$string": "是",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1525,7 +1525,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 50.84,
+      "width": 220,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -1538,7 +1538,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        6.732,
+        4,
         0,
         0,
         0,
@@ -1577,23 +1577,21 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "No",
-    "_N$string": "No",
+    "_string": "否",
+    "_N$string": "否",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -1883,6 +1881,35 @@
     "background": null,
     "main": null,
     "animTime": 0.3,
+    "_id": ""
+  },
+  {
+    "__type__": "add99Rw0FFJA520CZgvUu2+",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_id": ""
+  },
+  {
+    "__type__": "04d48vOPStITqO0tTC80wT0",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "canShowBanner": true,
+    "refeshBanner": true,
+    "afterCloseShowBanner": false,
+    "isHideBanner": true,
+    "isShowInsertAd": false,
+    "showInsertCount": 1,
+    "showInsertCount_google": 1,
+    "type": "browse",
+    "key": "normal",
     "_id": ""
   },
   {

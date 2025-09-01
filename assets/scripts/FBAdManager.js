@@ -158,7 +158,7 @@ var C = (function () {
                                     : this._state != a.NONE
                                     ? [3, 2]
                                     : ((this._state = a.NEW),
-                                      console.log("获取广告对象: " + this.getInfo()),
+                                    //   console.log("获取广告对象: " + this.getInfo()),
                                       (t = this),
                                       [4, this.createAdInstanceAsync(this._adId)]);
                             case 1:
@@ -423,8 +423,8 @@ var C = (function () {
                     if (this._interstitialAds.length >= 3)
                         throw (console.log("添加插屏广告失败, 超出限制: " + this._interstitialAds.length, t), u);
                     var i = new x(t, this._interstitialTimer, this.defaultInterstitialOption);
-                    this._interstitialAds.push(i),
-                        console.log("添加插屏广告: " + t, "count: " + this._interstitialAds.length);
+                    this._interstitialAds.push(i)
+                        // console.log("添加插屏广告: " + t, "count: " + this._interstitialAds.length);
                 }
                 return this._interstitialAds.length;
             }),
@@ -439,8 +439,8 @@ var C = (function () {
                     if (this._rewardedVideos.length >= 3)
                         throw (console.log("添加激励视频广告失败, 超出限制: " + this._rewardedVideos.length, t), u);
                     var i = new I(t, this._rewardedVideoTimer, this.defaultRewardedVideoOption);
-                    this._rewardedVideos.push(i),
-                        console.log("添加激励视频广告: " + t, "count: " + this._rewardedVideos.length);
+                    this._rewardedVideos.push(i);
+                        // console.log("添加激励视频广告: " + t, "count: " + this._rewardedVideos.length);
                 }
                 return this._rewardedVideos.length;
             }),

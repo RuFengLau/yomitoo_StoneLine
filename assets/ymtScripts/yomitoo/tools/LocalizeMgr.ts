@@ -21,7 +21,8 @@ export enum LanguageType {
     /**越南语*/vi = "vi",
     /**葡语*/pt_br = "pt_br",
     /**阿拉伯*/ar = "ar",
-    /**俄罗斯*/ru = "ru"
+    /**俄罗斯*/ru = "ru",
+    /**西班牙*/es = "es"
 }
 
 export class LocalizeMgr {
@@ -119,7 +120,6 @@ export class LocalizeMgr {
             }
         }
         response && response(true);
-        console.error("label:", label);
         return label;
     }
 

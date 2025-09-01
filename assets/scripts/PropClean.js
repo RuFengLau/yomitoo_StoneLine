@@ -1,8 +1,10 @@
+const { PlatformAdManager } = require("../ymtScripts/yomitoo/tools/PlatformAdManager");
+
 var t = require;
 var e = module;
 var n = exports;
 var i;
-Object.defineProperty(n, "__esModule", {value: !0});
+Object.defineProperty(n, "__esModule", { value: !0 });
 var r = t("PropConfig"),
     s = t("DataManager"),
     c = t("PopupManager"),
@@ -40,8 +42,8 @@ var r = t("PropConfig"),
             (e.prototype.updateNum = function () {
                 s.default.inst.propCleanNum.val > 0
                     ? ((this.numLabel.string = s.default.inst.propCleanNum.val),
-                      (this.numBg.active = !0),
-                      (this.coinBg.active = !1))
+                        (this.numBg.active = !0),
+                        (this.coinBg.active = !1))
                     : ((this.coinBg.active = !0), (this.numBg.active = !1));
             }),
             (e.prototype.updateSelect = function () {
@@ -50,15 +52,38 @@ var r = t("PropConfig"),
                     : this.PropCleanSpine.setAnimation(0, "animation", !1);
             }),
             (e.prototype.onPropCleanChick = function () {
-                console.log("点击消除道具"),
-                    (s.default.inst.bSelectPropBomb.val = !1),
-                    s.default.inst.bSelectPropClean.val
-                        ? (s.default.inst.bSelectPropClean.val = !1)
-                        : s.default.inst.propCleanNum.val > 0
-                        ? (s.default.inst.bSelectPropClean.val = !0)
-                        : s.default.inst.coinNum.val >= r.default.propCleanCoin
-                        ? (s.default.inst.bSelectPropClean.val = !0)
-                        : c.default.show(l.default.path, c.PopupCacheMode.Normal, {tipStr: String("金币不足").toLocalize()});
+                // 先关闭炸弹道具选择
+                s.default.inst.bSelectPropClean.val = false;
+
+                // 如果已经选中清除 → 取消选择
+                if (s.default.inst.bSelectPropClean.val) {
+                    s.default.inst.bSelectPropClean.val = false;
+                    return;
+                }
+
+                // 如果有清除道具 → 选中
+                if (s.default.inst.propCleanNum.val > 0) {
+                    s.default.inst.bSelectPropClean.val = true;
+                    return;
+                }
+
+                // 如果金币够买清除 → 选中
+                // if (s.default.inst.coinNum.val >= r.default.propCleanCoin) {
+                //     s.default.inst.bSelectPropClean.val = true;
+                //     return;
+                // }
+
+                PlatformAdManager.inst.showRewardedVideo(sss=>{
+                    if(sss){
+                        s.default.inst.bSelectPropClean.val = true;
+                    }
+                })
+                // 都不满足 → 提示金币不足
+                // c.default.show(
+                //     l.default.path,
+                //     c.PopupCacheMode.Normal,
+                //     { tipStr: String("金币不足").toLocalize() }
+                // );
             }),
             __decorate([d(sp.Skeleton)], e.prototype, "PropCleanSpine", void 0),
             __decorate([d(cc.Node)], e.prototype, "coinBg", void 0),

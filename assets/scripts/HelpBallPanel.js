@@ -1,3 +1,5 @@
+const { LocalizeMgr } = require("../ymtScripts/yomitoo/tools/LocalizeMgr");
+
 var t = require;
 var e = module;
 var n = exports;
@@ -46,7 +48,7 @@ var c = t("CustomEventType"),
                 (u.default.inst.helpTime.val += 1),
                     (this.levelData = u.default.inst.getLevelData()),
                     (this.BallsNum1.string = "+" + this.levelData.helpBallsNum),
-                    (this.BallsNum2.string = "" + this.levelData.helpBallsNum),
+                    (this.BallsNum2.string = LocalizeMgr.inst.toLocalize(`增加{0}颗宝石可以大大提高通关率`, [String(this.levelData.helpBallsNum)])),
                     (this.CoinNum.string = "" + this.needCoinNum);
             }),
             (e.prototype.onCoinGetBtnClick = function () {

@@ -2218,7 +2218,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 75.63,
+      "width": 120,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -2274,19 +2274,17 @@
     "_N$string": "DAY1",
     "_fontSize": 30,
     "_lineHeight": 40,
-    "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_enableWrapText": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
@@ -3040,7 +3038,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 79.47,
+      "width": 220,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -3096,19 +3094,17 @@
     "_N$string": "DAY7",
     "_fontSize": 30,
     "_lineHeight": 40,
-    "_enableWrapText": true,
-    "_N$file": {
-      "__uuid__": "a421366d-1420-419b-905b-6a5bfa31df18"
-    },
-    "_isSystemFontUsed": false,
+    "_enableWrapText": false,
+    "_N$file": null,
+    "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_batchAsBitmap": false,
-    "_styleFlags": 0,
+    "_styleFlags": 1,
     "_underlineHeight": 0,
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 2,
     "_N$cacheMode": 0,
     "_id": ""
   },
