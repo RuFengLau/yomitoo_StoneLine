@@ -9,6 +9,10 @@ var r = t("PropConfig"),
     s = t("DataManager"),
     c = t("PopupManager"),
     l = t("PopupToastPanel"),
+    MsgTipPanel = t("MsgTipPanel"),
+    EventMgr = t("EventMgr"),
+    CustomEventType = t("CustomEventType"),
+
     p = cc._decorator,
     u = p.ccclass,
     d = p.property,
@@ -32,12 +36,17 @@ var r = t("PropConfig"),
                     this.updateNum();
             }),
             (e.prototype.onEnable = function () {
+                EventMgr.default.inst.on(CustomEventType.default.AD_GET_BOMB_EVENT, this.onEvent, this);
                 s.default.inst.propBombNum.bindObserveFunc(this.updateNum, this),
                     s.default.inst.bSelectPropBomb.bindObserveFunc(this.updateSelect, this);
             }),
             (e.prototype.onDestroy = function () {
+                EventMgr.default.inst.off(CustomEventType.default.AD_GET_BOMB_EVENT, this.onEvent, this);
                 s.default.inst.propBombNum.unBindObserveFunc(this.updateNum),
                     s.default.inst.bSelectPropBomb.unBindObserveFunc(this.updateSelect);
+            }),
+            (e.prototype.onEvent = function (t) {
+                s.default.inst.bSelectPropBomb.val = true;
             }),
             (e.prototype.updateNum = function () {
                 s.default.inst.propBombNum.val > 0
@@ -74,11 +83,13 @@ var r = t("PropConfig"),
                 }
                 
                 // 都不满足 → 提示金币不足
-                c.default.show(
-                    l.default.path,
-                    c.PopupCacheMode.Normal,
-                    { tipStr: String("金币不足").toLocalize() }
-                );
+                // c.default.show(
+                //     l.default.path,
+                //     c.PopupCacheMode.Normal,
+                //     { tipStr: String("金币不足").toLocalize() }
+                // );
+
+                c.default.show(MsgTipPanel.default.path, c.PopupCacheMode.Normal);
             }),
             __decorate([d(sp.Skeleton)], e.prototype, "PropIconSpine", void 0),
             __decorate([d(cc.Node)], e.prototype, "propBombCoinBg", void 0),

@@ -29,5 +29,6 @@
 		{ "_id": "25", "key": "剩余宝石", "en_us": "Remaining Gems", "id": "Sisa Permata", "pt_br": "Gemas Restantes", "es": "Gemas restantes", "vi": "Đá quý còn lại" },
 		{ "_id": "26", "key": "奖励分数", "en_us": "Reward Score", "id": "Skor Hadiah", "pt_br": "Pontuação de Recompensa", "es": "Puntuación de recompensa", "vi": "Điểm thưởng" },
 		{ "_id": "27", "key": "分数", "en_us": "Score", "id": "Skor", "pt_br": "Pontos", "es": "Puntos", "vi": "Điểm" },
-		{ "_id": "28", "key": "暂停", "en_us": "Pause", "id": "Jeda", "pt_br": "Pausa", "es": "Pausa", "vi": "Tạm dừng" }
+		{ "_id": "28", "key": "暂停", "en_us": "Pause", "id": "Jeda", "pt_br": "Pausa", "es": "Pausa", "vi": "Tạm dừng" },
+		{ "_id": "29", "key": "增加20颗宝石可以大大提高通关率", "en_us": "Adding 20 gems greatly boosts pass rate", "id": "Tambah 20 permata tingkatkan peluang", "pt_br": "Adicionar 20 gemas aumenta chance", "es": "Añadir 20 gemas mejora mucho", "vi": "Thêm 20 ngọc tăng tỷ lệ qua màn" }
 	]}

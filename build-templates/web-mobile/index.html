@@ -93,33 +93,28 @@
     <script src="ccc2-all-patches.js" charset="utf-8"></script>
 
     <script type="text/javascript">
-        window["MiniGameSDK"] = {};
-        var gameName = "Stone Line"
-        resolution.init(720, 1280);
-        // console.timeEnd = console.time = console.error = console.log = console.info = console.warn = function () { };
-        h5splash.init({ appName: gameName, channel: "yomitoo" });
-        h5splash.setGameLogoScale(0.8);
-        //设置背景颜色
-        h5splash.setBackgroundColor("#99e0f3");
-        function isMobile() {
-            return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-        // 示例用法
-        if (isMobile()) {
-            const divB = document.getElementById("GameCanvas");
-            const divA = document.getElementById("Game");
-
-            if (divB && divA && divA.parentNode) {
-                divA.parentNode.insertBefore(divB, divA.nextSibling);
-            }
-        } else {
-            resolution.init(720, 1280);
-        }
-    </script>
-
-    <script type="text/javascript">
         (function () {
-           
+            window["MiniGameSDK"] = {};
+            var gameName = "Stone Line"
+            // resolution.init(720, 1280);
+            // console.timeEnd = console.time = console.error = console.log = console.info = console.warn = function () { };
+            h5splash.init({ appName: gameName, channel: "yomitoo" });
+            h5splash.setGameLogoScale(0.8);
+            //设置背景颜色
+            h5splash.setBackgroundColor("#99e0f3");
+            function isMobile() {
+                return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+            if (isMobile()) {
+                const divB = document.getElementById("GameCanvas");
+                const divA = document.getElementById("Game");
+
+                if (divB && divA && divA.parentNode) {
+                    divA.parentNode.insertBefore(divB, divA.nextSibling);
+                }
+            } else {
+                resolution.init(720, 1280);
+            }
             // open web debugger console
             if (typeof VConsole !== 'undefined') {
                 window.vConsole = new VConsole();

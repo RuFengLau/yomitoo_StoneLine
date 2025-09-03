@@ -96,22 +96,22 @@ var c = t("PropConfig"),
                     var i = cc.instantiate(this.ballSpinePrefab);
                     this.ballSpineNodePool.put(i);
                 }
-                this.scheduleOnce(function () {
-                    return __awaiter(t, void 0, void 0, function () {
-                        return __generator(this, function (t) {
-                            switch (t.label) {
-                                case 0:
-                                    return d.default.inst.isRulesShow.val
-                                        ? [4, h.default.show(A.default.path, h.PopupCacheMode.Normal)]
-                                        : [3, 2];
-                                case 1:
-                                    t.sent(), this.showGuide(), (t.label = 2);
-                                case 2:
-                                    return [2];
-                            }
-                        });
-                    });
-                }, 1),
+                // this.scheduleOnce(function () {
+                //     return __awaiter(t, void 0, void 0, function () {
+                //         return __generator(this, function (t) {
+                //             switch (t.label) {
+                //                 case 0:
+                //                     return d.default.inst.isRulesShow.val
+                //                         ? [4, h.default.show(A.default.path, h.PopupCacheMode.Normal)]
+                //                         : [3, 2];
+                //                 case 1:
+                //                     t.sent(), this.showGuide(), (t.label = 2);
+                //                 case 2:
+                //                     return [2];
+                //             }
+                //         });
+                //     });
+                // }, 1),
                     d.default.inst.levelTurnNum.bindObserveFunc(this.levelTurnNumFlush, this),
                     d.default.inst.scoreNum.bindObserveFunc(this.scoreNumFlush, this),
                     this.bombSpeedEditBox && (this.bombSpeedEditBox.string = this.ballBombSpeed.toString()),
@@ -599,81 +599,85 @@ var c = t("PropConfig"),
                 }
             }),
             (e.prototype.checkGameEnd = function () {
-                return __awaiter(this, void 0, void 0, function () {
-                    var t,
-                        e,
-                        n,
-                        i,
-                        o = this;
-                    return __generator(this, function (a) {
-                        switch (a.label) {
-                            case 0:
-                                if (this.isCanClean()) return [3, 8];
-                                console.log("不能消除了"),
-                                    (this.bCheckGameEnd = !1),
-                                    (this.surplusBallLabel.node.active = !0),
-                                    (this.surplusBallLabel.string = String("剩余宝石").toLocalize() + " " + this.gameBalls.length),
-                                    this.gameBalls.length,
-                                    (this.bonusLabel.node.active = !0),
-                                    (t = d.default.inst.getBonusScore(this.gameBalls.length)),
-                                    (this.bonusLabel.string = "奖励分数" + " " + t),
-                                    (d.default.inst.scoreNum.val += t),
-                                    (e = function (t) {
-                                        var e, i;
-                                        return __generator(this, function (a) {
-                                            switch (a.label) {
-                                                case 0:
-                                                    return (
-                                                        (e = n.gameBalls[t]),
-                                                        n.ballNodePool.put(e.node),
-                                                        ((i = n.createSpineBall()).node.parent = n.ballNodes),
-                                                        (i.node.position = e.node.position),
-                                                        i.playBomb(e.gameBallData.num, function () {
-                                                            o.ballSpineNodePool.put(i.node);
-                                                        }),
-                                                        [4, n.waitTime(n.ballBombSpeed)]
-                                                    );
-                                                case 1:
-                                                    return a.sent(), [2];
-                                            }
-                                        });
-                                    }),
-                                    (n = this),
-                                    (i = 0),
-                                    (a.label = 1);
-                            case 1:
-                                return i < this.gameBalls.length ? [5, e(i)] : [3, 4];
-                            case 2:
-                                a.sent(), (a.label = 3);
-                            case 3:
-                                return i++, [3, 1];
-                            case 4:
-                                return (
-                                    (this.gameBalls = []),
-                                    f.default.inst.playEffect("fireworks"),
-                                    this.cdSpine.playAn("animation", 1),
-                                    [4, this.waitTime(2)]
-                                );
-                            case 5:
-                                return (
-                                    a.sent(),
-                                    this.bShowLevelUpTips
-                                        ? ((d.default.inst.levelNum.val += 1),
-                                          (d.default.inst.helpTime.val = 0),
-                                          (d.default.inst.levelStartScore.val = d.default.inst.scoreNum.val),
-                                          (this.surplusBallLabel.node.active = !1),
-                                          (this.bonusLabel.node.active = !1),
-                                          [4, h.default.show(b.default.path, h.PopupCacheMode.Frequent)])
-                                        : [3, 7]
-                                );
-                            case 6:
-                                return a.sent(), d.default.inst.addTheme(), this.initGame(), [3, 8];
-                            case 7:
-                                h.default.show(S.default.path, h.PopupCacheMode.Frequent), (a.label = 8);
-                            case 8:
-                                return [2];
-                        }
+                var self = this;
+            
+                // 如果还能消除，直接返回
+                if (this.isCanClean()) {
+                    return Promise.resolve();
+                }
+            
+                console.log("不能消除了");
+                this.bCheckGameEnd = false;
+            
+                // 显示剩余宝石
+                this.surplusBallLabel.node.active = true;
+                this.surplusBallLabel.string = String("剩余宝石").toLocalize() + " " + this.gameBalls.length;
+            
+                // 显示奖励分数
+                this.bonusLabel.node.active = true;
+                var bonus = d.default.inst.getBonusScore(this.gameBalls.length);
+                this.bonusLabel.string = String("奖励分数").toLocalize() + " " + bonus;
+                d.default.inst.scoreNum.val += bonus;
+            
+                // 播放爆炸动画
+                var n = this;
+                var playBombAt = function (idx) {
+                    return new Promise(function (resolve) {
+                        var e = n.gameBalls[idx];
+                        n.ballNodePool.put(e.node);
+            
+                        var spineBall = n.createSpineBall();
+                        spineBall.node.parent = n.ballNodes;
+                        spineBall.node.position = e.node.position;
+            
+                        spineBall.playBomb(e.gameBallData.num, function () {
+                            self.ballSpineNodePool.put(spineBall.node);
+                        });
+            
+                        n.waitTime(n.ballBombSpeed).then(resolve);
                     });
+                };
+            
+                return new Promise(function (resolve) {
+                    // 依次执行所有爆炸
+                    var promise = Promise.resolve();
+                    for (var i = 0; i < n.gameBalls.length; i++) {
+                        (function (idx) {
+                            promise = promise.then(function () {
+                                return playBombAt(idx);
+                            });
+                        })(i);
+                    }
+            
+                    promise.then(function () {
+                        // 清空宝石
+                        n.gameBalls = [];
+            
+                        // 播放特效
+                        f.default.inst.playEffect("fireworks");
+                        n.cdSpine.playAn("animation", 1);
+            
+                        // 等待 2 秒
+                        return n.waitTime(2);
+                    }).then(function () {
+                        if (self.bShowLevelUpTips) {
+                            d.default.inst.levelNum.val += 1;
+                            d.default.inst.helpTime.val = 0;
+                            d.default.inst.levelStartScore.val = d.default.inst.scoreNum.val;
+            
+                            self.surplusBallLabel.node.active = false;
+                            self.bonusLabel.node.active = false;
+            
+                            // 弹出升级提示
+                            return h.default.show(b.default.path, h.PopupCacheMode.Frequent).then(function () {
+                                d.default.inst.addTheme();
+                                self.initGame();
+                            });
+                        } else {
+                            // 弹出普通结算
+                            h.default.show(S.default.path, h.PopupCacheMode.Frequent);
+                        }
+                    }).then(resolve);
                 });
             }),
             (e.prototype.isCanClean = function () {

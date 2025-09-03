@@ -25,6 +25,8 @@ var r = t("BundleManager"),
                 (e.propBombBg = null),
                 (e.propCleanBg = null),
                 (e.fanButton = null),
+                (e.topBgNode = null),
+                (e.downBgNode = null),
                 e
             );
         }
@@ -39,6 +41,12 @@ var r = t("BundleManager"),
                     s.default.inst.theme.bindObserveFunc(this.fluhsTopBg, this),
                     this.fluhsLevel(),
                     this.fluhsTopBg();
+
+                    setTimeout(()=>{
+                        this.topBgNode.x = 0;
+                        this.downBgNode.x = 0;
+                    },1)
+                    
             }),
             (e.prototype.onDestroy = function () {
                 s.default.inst.levelNum.unBindObserveFunc(this.fluhsLevel),
@@ -73,7 +81,7 @@ var r = t("BundleManager"),
             }),
             (e.prototype.fluhsLevel = function () {
                 var t = s.default.inst.levelNum.val;
-                (this.levelLabel.string = "关卡" + " " + t),
+                (this.levelLabel.string = String("关卡").toLocalize() + " " + t),
                     (this.curLevelLabel.string = "" + s.default.inst.levelNum.val),
                     (this.nextLevelLabel.string = s.default.inst.levelNum.val + 1);
             }),
@@ -95,6 +103,8 @@ var r = t("BundleManager"),
             __decorate([y(cc.Sprite)], e.prototype, "propBombBg", void 0),
             __decorate([y(cc.Sprite)], e.prototype, "propCleanBg", void 0),
             __decorate([y(cc.Sprite)], e.prototype, "fanButton", void 0),
+            __decorate([y(cc.Node)], e.prototype, "topBgNode", void 0),
+            __decorate([y(cc.Node)], e.prototype, "downBgNode", void 0),
             __decorate([f], e)
         );
     })(cc.Component);

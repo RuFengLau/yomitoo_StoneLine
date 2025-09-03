@@ -404,7 +404,7 @@ export default class BaseGameSys {
             } else {
                 LocalizeMgr.inst.languageType = LanguageType.en_us;
             }
-            LocalizeMgr.inst.languageType = LanguageType.cn;
+            // LocalizeMgr.inst.languageType = LanguageType.cn;
             YmtLog.l("当前语言：", LocalizeMgr.inst.languageType)
             if (sysInfo) {
                 this.screenWidth = sysInfo.screenWidth;

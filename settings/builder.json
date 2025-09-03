@@ -2,7 +2,9 @@
   "title": "outputProject",
   "packageName": "org.cocos2d.demo",
   "startScene": "240a8849-53e8-42cc-add1-0e836ac2c551",
-  "excludeScenes": [],
+  "excludeScenes": [
+    "204597ee-7a07-466a-8b5a-766c7207b72d"
+  ],
   "orientation": {
     "landscapeRight": true,
     "landscapeLeft": true,
