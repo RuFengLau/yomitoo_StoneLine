@@ -1,8 +1,10 @@
+const { LocalizeMgr } = require("../ymtScripts/yomitoo/tools/LocalizeMgr");
+
 var t = require;
 var e = module;
 var n = exports;
 var i;
-Object.defineProperty(n, "__esModule", {value: !0});
+Object.defineProperty(n, "__esModule", { value: !0 });
 var c = t("CustomEventType"),
     l = t("EventMgr"),
     p = t("DataManager"),
@@ -31,9 +33,8 @@ var c = t("CustomEventType"),
                 u.default.closePopup(f.default.path);
             }),
             (e.prototype.updateDisplay = function () {
-                (this.levelData = p.default.inst.getLevelData()),
-                    (this.TipsText.string =
-                        "Insufficient gold, whether to add " + this.levelData.helpBallsNum + " gems for free！");
+                this.levelData = p.default.inst.getLevelData();
+                this.TipsText.string = LocalizeMgr.inst.toLocalize(`金币不足，是否免费增加{0}颗宝石`, [String(this.levelData.helpBallsNum)]);
             }),
             (e.prototype.onVideoGetBtnClick = function () {
                 var t = this;
